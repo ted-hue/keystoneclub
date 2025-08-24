@@ -1,18 +1,38 @@
 /* ----------------------------------------------------------------
    [기본 설정 및 전체 레이아웃 공통 요소]
 ---------------------------------------------------------------- */
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* 인앱브라우저 호환성 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   background-color: #e6e6e6; /* ✅ 회색톤 추가 */
   color: #ffffff;
   font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  /* iOS Safari 및 인앱브라우저 최적화 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .content-wrapper {
   background-color: #ffffff;    /* ✅ 본문 영역 강조 */
   max-width: 390px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 45px; /* 네비게이션 정확한 높이 */
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 
@@ -22,7 +42,7 @@ body {
 ---------------------------------------------------------------- */
 .fixed-header {
   position: fixed;
-  top: -1px;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -37,7 +57,6 @@ body {
 
   background-color: #fff;
   color: #000;
-  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -194,7 +213,7 @@ button {
 .hero {
   background-size: cover;
   background-color: #000;
-  padding-top: 200px;
+  padding-top: 200px; /* 기존 상단 여백만 유지 */
   padding-bottom: 200px;     /* ✅ 여백은 유지하되 적당히 축소 */
   box-sizing: border-box;
   display: flex;
@@ -209,7 +228,7 @@ button {
 .hero-swiper {
   width: 100%;
   height: auto;
-  background-color: #f9f9f9;
+  background-color: transparent;
 }
 
 /* 각 슬라이드 화면 전체를 채움 */
@@ -2031,4 +2050,55 @@ button {
   font-weight: 600;
   font-size: 0.8rem;
   display: inline-block;
+}
+
+/* ----------------------------------------------------------------
+   [모바일 웹뷰 및 인앱브라우저 최적화]
+---------------------------------------------------------------- */
+
+/* iOS Safari 및 카카오톡 인앱브라우저 대응 */
+@supports (-webkit-touch-callout: none) {
+  .content-wrapper {
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    min-height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
+
+/* 카카오톡, 페이스북 인앱브라우저 스크롤 최적화 */
+.content-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* 네비게이션 정밀 조정 - 1px 간격 완전 제거 */
+.fixed-header {
+  /* 완전히 깔끔한 경계선 제거 */
+  border-bottom: none;
+  box-shadow: none;
+  /* 브라우저별 렌더링 차이 보정 */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* 모든 섹션 상단 여백 정밀 조정 */
+.hero-swiper,
+.reserve-hero-section,
+.reserve-detail-hero {
+  margin-top: 0;
+}
+
+/* 인앱브라우저 스크롤바 숨김 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 터치 디바이스 최적화 */
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
