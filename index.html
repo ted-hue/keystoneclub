@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service - Keystone Club</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+  <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- 항상 보이는 로고/버튼 -->
+    <div class="fixed-header">
+      <div class="logo" id="main-logo">KEYSTONECLUB</div>
+      <button id="menuButton" class="hamburger-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- 첫번째 -->
+    <section id="home-section" class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <!-- 슬라이드 1 -->
+            <div class="swiper-slide hero-slide-bg bg-why-vivid">
+            <div class="hero-center">
+                <div class="hero-slide">
+                <p class="hero-sub">프리미엄은, 프리미엄답게</p>
+                <h1 class="hero-title">특별한 가치를 만드는 브랜드를 위해</h1>
+                <img src="img/main1.png" alt="프라이빗" class="hero-image" />
+                <button class="hero-btn" onclick="scrollToSection('selective-connection')">서비스 살펴보기</button>
+                </div>
+            </div>
+            </div>
+            <!-- 슬라이드 2 -->
+            <div class="swiper-slide hero-slide-bg bg-how-vivid">
+            <div class="hero-center">
+                <div class="hero-slide">
+                <p class="hero-sub">가치를 알아보는 사람들에게만</p>
+                <h1 class="hero-title">많은 노출보다, 정확한 연결</h1>
+                <img src="img/main2.png" alt="브랜드 마케팅" class="hero-image" />
+                <button class="hero-btn" onclick="window.location.href='reserve.html'">리저브 구경하기</button>
+                </div>
+            </div>
+            </div>
+            <!-- 슬라이드 3 -->
+            <div class="swiper-slide hero-slide-bg bg-what-vivid">
+            <div class="hero-center">
+                <div class="hero-slide">
+                <p class="hero-sub">프라이빗 하게 소개되는 캠페인</p>
+                <h1 class="hero-title">지금, 리저브를 시작하세요</h1>
+                <img src="img/main3.png" alt="리저브 시작" class="hero-image" />
+                <button class="hero-btn" onclick="window.location.href='contact.html'">파트너 문의하기</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- 두번째 -->
+    <section class="section category-section page-block">
+      <div class="section info">
+        <h2>Meaningful Reach</h2>
+        <p>미식, 주류, 쇼핑, 헬스케어, 여행 등<br />
+          가치를 중요하게 여기는 고객이 경험할 수 있는 모든 영역을 다룹니다.<br /><br />
+          중요한 건 무엇을 보여주느냐보다<br /> 누구에게 보여주느냐입니다<br />
+          우리는 브랜드의 깊이를 이해할 수 있는 <br />고객에게만 리저브로 연결합니다
+        </p>
+      </div>
+        <div class="category-grid">
+            <div class="category-card">
+              <div class="emoji">🍽️</div>
+              <h3>Gourmet</h3>
+              <p>미쉐린 셰프 테이블<br /> 단독 시그너처 디너</p>
+            </div>
+            <div class="category-card">
+              <div class="emoji">🥃</div>
+              <h3>Drinks</h3>
+              <p>하이엔드 위스키 시음<br /> 프라이빗 테이스팅</p>
+            </div>
+            <div class="category-card">
+              <div class="emoji">🛍️</div>
+              <h3>Shopping</h3>
+              <p>퍼스널 쇼퍼 동행 <br />브랜드 단독 피팅</p>
+            </div>
+            <div class="category-card">
+              <div class="emoji">✈️</div>
+              <h3>Travel</h3>
+              <p>프라이빗 숙소, 큐레이터 동반 문화 투어</p>
+            </div>
+            <div class="category-card">
+              <div class="emoji">💆‍♀️</div>
+              <h3>Beauty</h3>
+              <p>럭셔리 에스테틱 1:1 <br />프라이빗 케어</p>
+            </div>
+            <div class="category-card">
+              <div class="emoji">💪</div>
+              <h3>Health</h3>
+              <p>바디 분석 기반 PT<br /> 기능의학 프리미엄 검진</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 세번재 -->
+    <section id="selective-connection" class="brand-slide-section bg-why-vivid">
+      <h2 class="section-title">Selective Connection</h2>
+      <p class="section-subtitle">우리는 단순히 보여주지 않습니다 <br />
+        브랜드의 진짜 가치를 이해할 수 있는 소수에게만<br /> 비공개 방식으로 연결합니다
+      <div class="swiper brand-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide brand-slide">
+            <div class="slide-card">
+              <img src="img/s6.jpg" alt="슬라이드1" class="slide-image" />
+              <div class="slide-textbox">
+                <h4>Private</h4>
+                <p class="selection-lead">누구나 볼 수 없습니다 <span>아무곳에서 검색되지 않고, 공유되지 않습니다</span> 리저브는 플랫폼 안에서만 열립니다</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide brand-slide">
+            <div class="slide-card">
+              <img src="img/s4.jpg" alt="슬라이드2" class="slide-image" />
+              <div class="slide-textbox">
+                <h4>Selection</h4>
+                <p class="selection-lead">특별한 인증방식을 통해<span> 검증된 가치를 알아보는 VIP 고객에게만 </span> 브랜드의 특별한 리저브를 노출하게 됩니다</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide brand-slide">
+            <div class="slide-card">
+              <img src="img/s3.jpeg" alt="슬라이드3" class="slide-image" />
+              <div class="slide-textbox">
+                <h4>Coversion</h4>
+                <p class="selection-lead">조회수나 리뷰만 모아주는 것이 아닙니다 <span>브랜드를 다시 이용할 수 있는 신규 고객 확보</span> 그리고 구매전환 성과로 증명합니다</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로세스 영역 -->
+    <section class="reserve-process-section">
+      <div class="section info">
+        <h2>Curated Process</h2>
+        <p>
+          리저브는 하나의 콘텐츠가 아닙니다<br>
+          브랜드와 함께 기획하고, 고객에게 도달하며<br> 전환으로 마무리되는 하나의 정교한 흐름입니다
+        </p>
+      </div>
+      <div class="reserve-cards">
+        <div class="reserve-card">
+          <div class="reserve-icon">🤝</div>
+          <div class="reserve-content">
+            <h4>STEP 1</h4>
+            <p>브랜드와 키스톤클럽이 별도로<br>파트너십을 체결합니다</p>
+          </div>
+        </div>
+        <div class="reserve-card">
+          <div class="reserve-icon">📦</div>
+          <div class="reserve-content">
+            <h4>STEP 2</h4>
+            <p>회원에게 노출할 리저브 기획을<br>구성하고 검수를 거칩니다</p>
+          </div>
+        </div>
+        <div class="reserve-card">
+          <div class="reserve-icon">📣</div>
+          <div class="reserve-content">
+            <h4>STEP 3</h4>
+            <p>리저브 리스트에 노출되어<br>주요 고객에게 전달됩니다</p>
+          </div>
+        </div>
+        <div class="reserve-card">
+          <div class="reserve-icon">📇</div>
+          <div class="reserve-content">
+            <h4>STEP 4</h4>
+            <p>참여 고객 데이터를 기반으로<br>CRM을 통해 후속 관리합니다</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 국내 주요 금융사 파트너십 섹션 -->
+    <section class="partnership-section">
+      <div class="section info">
+        <h2>Trusted Partnership</h2>
+        <p>
+          국내 주요 금융사와의 신뢰할 수 있는<br />
+          파트너십을 통해 검증된 VIP 고객에게만<br />
+          리저브를 제공합니다<br /><br />
+          
+          프라이빗 뱅킹 고객, 웰스매니지먼트 회원 등<br />
+          신뢰할 수 있는 채널을 통해서만 연결되는<br />
+          안전하고 품격 있는 매칭 서비스입니다
+        </p>
+      </div>
+      
+      <!-- 은행 로고 슬라이더 -->
+      <div class="partner-logos">
+        <!-- 첫 번째 줄 - 왼쪽으로 슬라이드 -->
+        <div class="logo-row logo-row-left">
+          <div class="logo-track">
+            <img src="img/1.jpg" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/3.jpeg" alt="파트너 로고 2" class="partner-logo" />
+            <img src="img/2.jpg" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/5.png" alt="파트너 로고 2" class="partner-logo" />
+            <img src="img/4.png" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/6.png" alt="파트너 로고 2" class="partner-logo" />
+          </div>
+        </div>
+        
+        <!-- 두 번째 줄 - 오른쪽으로 슬라이드 -->
+        <div class="logo-row logo-row-right">
+          <div class="logo-track">
+            <img src="img/3.jpeg" alt="파트너 로고 2" class="partner-logo" />
+            <img src="img/1.jpg" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/5.png" alt="파트너 로고 2" class="partner-logo" />
+            <img src="img/2.jpg" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/4.png" alt="파트너 로고 1" class="partner-logo" />
+            <img src="img/6.png" alt="파트너 로고 2" class="partner-logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 리저브 피드 가로 스크롤 -->
+    <section class="section horizontal-feed-section">
+        <div class="exclusive-experiences-header">
+            <h2>Exclusive Experiences</h2>
+            <div class="exclusive-description">
+                <p>프리미엄 브랜드와 함께 진행한<br> 특별한 리저브를 만나보세요<br>
+                오직 초대받은 소수만이 경험할 수 있는<br> 독점적인 순간들입니다</p>
+            </div>
+        </div>
+        <div class="horizontal-feed-container">
+            <div class="swiper horizontal-feed-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="horizontal-feed-card" onclick="window.location.href='reserve-detail-1.html'">
+                            <div class="card-header">
+                                <div class="brand-avatar">🍷</div>
+                                <div class="card-info">
+                                    <h4>도메인 드 라 로마네 콘티</h4>
+                                    <p class="location">청담동 프라이빗 셀러</p>
+                                    <span class="timestamp">3일 전</span>
+                                </div>
+                            </div>
+                            <img src="img/r1.jpg" alt="와인 테이스팅" class="feed-image" />
+                            <div class="card-content">
+                                <h3>마스터 소믈리에와 함께하는 부르고뉴 테이스팅</h3>
+                                <p>세계 최고의 와인 12병과 함께하는 단 8명만의 프라이빗 세션이 성공리에 마무리되었습니다.</p>
+                                <div class="card-stats">
+                                    <span class="participants">참여 8명</span>
+                                    <span class="likes">❤️ 24</span>
+                                    <span class="status completed">완료됨</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="horizontal-feed-card" onclick="window.location.href='reserve-detail-2.html'">
+                            <div class="card-header">
+                                <div class="brand-avatar">🎨</div>
+                                <div class="card-info">
+                                    <h4>갤러리현대</h4>
+                                    <p class="location">강남구 청담동</p>
+                                    <span class="timestamp">1주 전</span>
+                                </div>
+                            </div>
+                            <img src="img/r2.jpg" alt="아트투어" class="feed-image" />
+                            <div class="card-content">
+                                <h3>큐레이터와 함께하는 프라이빗 아트투어</h3>
+                                <p>일반에게 공개되지 않는 VIP 전용 전시실에서 세계적인 현대미술 작품들을 관람하고, 작가와의 만남까지 경험하실 수 있었습니다.</p>
+                                <div class="card-stats">
+                                    <span class="participants">참여 10명</span>
+                                    <span class="likes">❤️ 31</span>
+                                    <span class="status completed">완료됨</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="horizontal-feed-card" onclick="window.location.href='reserve-detail-3.html'">
+                            <div class="card-header">
+                                <div class="brand-avatar">🥃</div>
+                                <div class="card-info">
+                                    <h4>The Balvenie x WG&S</h4>
+                                    <p class="location">청담동 WG&S 프라이빗 다이닝룸</p>
+                                    <span class="timestamp">1주 전</span>
+                                </div>
+                            </div>
+                            <img src="img/r3.jpg" alt="발베니 다이닝" class="feed-image" />
+                            <div class="card-content">
+                                <h3>25년 숙성 발베니와 함께하는 프리미엄 다이닝 경험</h3>
+                                <p>위스키 애호가들을 위한 발베니 25년과 셰프 특선 코스가 만나는 특별한 저녁 경험을 제공했습니다.</p>
+                                <div class="card-stats">
+                                    <span class="participants">참여 12명</span>
+                                    <span class="likes">❤️ 38</span>
+                                    <span class="status completed">완료됨</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="horizontal-feed-card" onclick="window.location.href='reserve-detail-4.html'">
+                            <div class="card-header">
+                                <div class="brand-avatar">🚗</div>
+                                <div class="card-info">
+                                    <h4>Bentley Motors Korea</h4>
+                                    <p class="location">벤틀리 강남 쇼룸</p>
+                                    <span class="timestamp">2주 전</span>
+                                </div>
+                            </div>
+                            <img src="img/r4.jpeg" alt="벤틀리 프리뷰" class="feed-image" />
+                            <div class="card-content">
+                                <h3>2025 신모델 출시 기념 초청 전용 프리뷰</h3>
+                                <p>럭셔리카 오너들만을 위한 벤틀리 신모델 시승과 VIP 라운지 경험, 그리고 브랜드 히스토리를 깊이 있게 체험할 수 있는 프리미엄 이벤트였습니다.</p>
+                                <div class="card-stats">
+                                    <span class="participants">참여 20명</span>
+                                    <span class="likes">❤️ 42</span>
+                                    <span class="status completed">완료됨</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="more-link-container">
+            <a href="reserve.html" class="more-link">더 자세히 보기 →</a>
+        </div>
+    </section>
+
+
+    <!-- 네비게이션 메뉴 -->
+    <div id="navMenu" class="nav-menu">
+      <div class="nav-overlay"></div>
+      <div class="nav-content">
+        <button class="nav-close">&times;</button>
+        <nav>
+          <a href="index.html">Service</a>
+          <a href="reserve.html">Reserve</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="floating-cta">
+        <button onclick="window.location.href='contact.html'">파트너 문의하기</button>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div>© 2025 Keystone Club</div>
+      <div>Contact: ted@keystoneclub.co.kr</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
