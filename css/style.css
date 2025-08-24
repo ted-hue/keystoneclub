@@ -228,13 +228,17 @@ button {
 .hero-swiper {
   width: 100%;
   height: auto;
+  min-height: 500px;
+  max-height: 700px;
   background-color: transparent;
 }
 
 /* 각 슬라이드 화면 전체를 채움 */
 .hero-swiper .swiper-slide {
   width: 100% !important;
-  height: 60vh !important;
+  height: auto;
+  min-height: 500px;
+  max-height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,8 +261,10 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 50px 30px;
+  gap: 20px;
+  padding: 30px 30px 40px;
+  min-height: 400px;
+  justify-content: center;
 }
 
 .hero-sub {
@@ -2064,10 +2070,69 @@ button {
   }
 }
 
+/* 카카오톡 인앱브라우저 히어로 섹션 최적화 */
+@media screen and (max-height: 700px) {
+  .hero-swiper .swiper-slide {
+    min-height: 450px;
+    max-height: 600px;
+  }
+  
+  .hero-slide {
+    padding: 20px 30px 30px;
+    min-height: 350px;
+    gap: 15px;
+  }
+  
+  .hero-swiper {
+    min-height: 450px;
+    max-height: 600px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .hero-swiper .swiper-slide {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  
+  .hero-slide {
+    padding: 15px 30px 25px;
+    min-height: 300px;
+    gap: 12px;
+  }
+  
+  .hero-swiper {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-sub {
+    font-size: 1rem !important;
+  }
+}
+
 /* 카카오톡, 페이스북 인앱브라우저 스크롤 최적화 */
 .content-wrapper {
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+}
+
+/* WebKit 브라우저용 안전한 높이 설정 */
+@supports (-webkit-appearance: none) {
+  .hero-swiper {
+    height: -webkit-fill-available;
+    max-height: 650px;
+  }
+  
+  .hero-swiper .swiper-slide {
+    height: -webkit-fill-available;
+    max-height: 650px;
+  }
 }
 
 /* 네비게이션 정밀 조정 - 1px 간격 완전 제거 */
