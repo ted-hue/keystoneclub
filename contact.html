@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Keystone Club</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- 항상 보이는 로고/버튼 -->
+    <div class="fixed-header">
+      <div class="logo" id="main-logo">KEYSTONECLUB</div>
+      <button id="menuButton" class="hamburger-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Contact 히어로 섹션 -->
+    <section class="contact-hero-section">
+      <div class="hero-content">
+        <h1>Partner with Us</h1>
+        <p>키스톤클럽과 함께<br />프리미엄 리저브를 기획해보세요</p>
+      </div>
+    </section>
+
+    <!-- 파트너 문의 폼 -->
+    <section class="contact-form-section">
+      <div class="contact-form-container">
+        <form id="partnerForm" class="partner-form">
+          <div class="form-group">
+            <label for="brandName">브랜드명 *</label>
+            <input type="text" id="brandName" name="brandName" required placeholder="브랜드 또는 회사명을 입력해주세요">
+          </div>
+
+          <div class="form-group">
+            <label for="contactName">담당자명 *</label>
+            <input type="text" id="contactName" name="contactName" required placeholder="담당자 성함을 입력해주세요">
+          </div>
+
+          <div class="form-group">
+            <label for="email">이메일 주소 *</label>
+            <input type="email" id="email" name="email" required placeholder="연락 가능한 이메일 주소를 입력해주세요">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">연락처 *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="연락 가능한 전화번호를 입력해주세요">
+          </div>
+
+          <div class="form-group">
+            <label for="businessType">사업 분야</label>
+            <select id="businessType" name="businessType">
+              <option value="">선택해주세요</option>
+              <option value="gourmet">미식 (레스토랑, 요리)</option>
+              <option value="drinks">주류 (와인, 위스키, 사케)</option>
+              <option value="shopping">쇼핑 (패션, 액세서리)</option>
+              <option value="travel">여행 (호텔, 리조트, 투어)</option>
+              <option value="beauty">뷰티 (에스테틱, 스파, 화장품)</option>
+              <option value="health">헬스케어 (피트니스, 의료, 웰니스)</option>
+              <option value="art">아트 (갤러리, 전시, 컬렉션)</option>
+              <option value="investment">투자 (부동산, 펀드, 자산관리)</option>
+              <option value="other">기타</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">문의 내용</label>
+            <textarea id="message" name="message" rows="5" placeholder="리저브로 기획하고 싶은 내용이나 궁금한 점을 자유롭게 작성해주세요"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">파트너십 문의하기</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- 네비게이션 메뉴 -->
+    <div id="navMenu" class="nav-menu">
+      <div class="nav-overlay"></div>
+      <div class="nav-content">
+        <button class="nav-close">&times;</button>
+        <nav>
+          <a href="index.html">Service</a>
+          <a href="reserve.html">Reserve</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Contact 페이지에서는 floating CTA 숨김 -->
+    <!-- <div class="floating-cta" style="display: none;"></div> -->
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div>© 2025 Keystone Club</div>
+      <div>Contact: mater@keystoneclub.co.kr</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

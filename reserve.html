@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve - Keystone Club</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- 항상 보이는 로고/버튼 -->
+    <div class="fixed-header">
+      <div class="logo" id="main-logo">KEYSTONECLUB</div>
+      <button id="menuButton" class="hamburger-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Reserve 히어로 섹션 -->
+    <section class="reserve-hero-section">
+      <div class="hero-content">
+        <h1>Reserve Collection</h1>
+        <p>검증된 VIP 고객만을 위한<br />특별한 리저브를 만나보세요</p>
+      </div>
+    </section>
+
+    <!-- Reserve 피드 -->
+    <section class="reserve-feed-section">
+      <div class="reserve-feed">
+        <!-- 피드 카드 1 -->
+        <article class="feed-card" onclick="window.location.href='reserve-detail-1.html'">
+          <div class="card-header">
+            <div class="brand-avatar">🍷</div>
+            <div class="card-info">
+              <h4>도메인 드 라 로마네 콘티</h4>
+              <p class="location">청담동 프라이빗 셀러</p>
+              <span class="timestamp">3일 전</span>
+            </div>
+          </div>
+          <img src="img/r1.jpg" alt="와인 테이스팅" class="feed-image" />
+          <div class="card-content">
+            <h3>마스터 소믈리에와 함께하는 부르고뉴 테이스팅</h3>
+            <p>세계 최고의 와인 12병과 함께하는 단 8명만의 프라이빗 세션이 성공리에 마무리되었습니다. 참여해주신 모든 분들께 감사드립니다.</p>
+            <div class="card-stats">
+              <span class="participants">참여 8명</span>
+              <span class="likes">❤️ 24</span>
+              <span class="status completed">완료됨</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 피드 카드 2 -->
+        <article class="feed-card" onclick="window.location.href='reserve-detail-2.html'">
+          <div class="card-header">
+            <div class="brand-avatar">🎨</div>
+            <div class="card-info">
+              <h4>갤러리현대</h4>
+              <p class="location">강남구 청담동</p>
+              <span class="timestamp">1주 전</span>
+            </div>
+          </div>
+          <img src="img/r2.jpg" alt="아트투어" class="feed-image" />
+          <div class="card-content">
+            <h3>큐레이터와 함께하는 프라이빗 아트투어</h3>
+            <p>일반에게 공개되지 않는 VIP 전용 전시실에서 세계적인 현대미술 작품들을 관람하고, 작가와의 만남까지 경험하실 수 있었습니다.</p>
+            <div class="card-stats">
+              <span class="participants">참여 10명</span>
+              <span class="likes">❤️ 31</span>
+              <span class="status completed">완료됨</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 피드 카드 3 -->
+        <article class="feed-card" onclick="window.location.href='reserve-detail-3.html'">
+          <div class="card-header">
+            <div class="brand-avatar">🥃</div>
+            <div class="card-info">
+              <h4>The Balvenie x WG&S</h4>
+              <p class="location">청담동 WG&S 프라이빗 다이닝룸</p>
+              <span class="timestamp">1주 전</span>
+            </div>
+          </div>
+          <img src="img/r3.jpg" alt="발베니 다이닝" class="feed-image" />
+          <div class="card-content">
+            <h3>25년 숙성 발베니와 함께하는 프리미엄 다이닝 경험</h3>
+            <p>위스키 애호가들을 위한 발베니 25년과 셰프 특선 코스가 만나는 특별한 저녁 경험을 제공했습니다.</p>
+            <div class="card-stats">
+              <span class="participants">참여 12명</span>
+              <span class="likes">❤️ 38</span>
+              <span class="status completed">완료됨</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 피드 카드 4 -->
+        <article class="feed-card" onclick="window.location.href='reserve-detail-4.html'">
+          <div class="card-header">
+            <div class="brand-avatar">🚗</div>
+            <div class="card-info">
+              <h4>Bentley Motors Korea</h4>
+              <p class="location">벤틀리 강남 쇼룸</p>
+              <span class="timestamp">2주 전</span>
+            </div>
+          </div>
+          <img src="img/r4.jpeg" alt="벤틀리 프리뷰" class="feed-image" />
+          <div class="card-content">
+            <h3>2025 신모델 출시 기념 초청 전용 프리뷰</h3>
+            <p>럭셔리카 오너들만을 위한 벤틀리 신모델 시승과 VIP 라운지 경험, 그리고 브랜드 히스토리를 깊이 있게 체험할 수 있는 프리미엄 이벤트였습니다.</p>
+            <div class="card-stats">
+              <span class="participants">참여 20명</span>
+              <span class="likes">❤️ 42</span>
+              <span class="status completed">완료됨</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 네비게이션 메뉴 -->
+    <div id="navMenu" class="nav-menu">
+      <div class="nav-overlay"></div>
+      <div class="nav-content">
+        <button class="nav-close">&times;</button>
+        <nav>
+          <a href="index.html">Service</a>
+          <a href="reserve.html">Reserve</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="floating-cta">
+        <button onclick="window.location.href='contact.html'">파트너 문의하기</button>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div>© 2025 Keystone Club</div>
+      <div>Contact: mater@keystoneclub.co.kr</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
