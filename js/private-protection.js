@@ -24,7 +24,7 @@ class PrivateProtection {
   setupPrivateSections() {
     // 보호할 섹션들을 h4 제목으로 찾기
     const headers = document.querySelectorAll('.detail-section h4');
-    const sectionsToProtect = ['참여자 정보', '제공된 경험', '리저브 현장'];
+    const sectionsToProtect = ['참여자 정보', '제공된 경험', '리저브 현장', '진행 장소'];
     
     headers.forEach(header => {
       sectionsToProtect.forEach(sectionTitle => {

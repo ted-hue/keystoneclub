@@ -7,5 +7,21 @@ http://www.keystoneclub.co.kr/* https://keystoneclub.co.kr/:splat 301!
 # Force HTTPS redirect
 http://keystoneclub.co.kr/* https://keystoneclub.co.kr/:splat 301!
 
+# Block access to sitemap and other crawler files
+/sitemap.xml 404
+/sitemap.txt 404
+/sitemap 404
+/robots 404
+
+# Block access to old reserve-detail files for additional security
+/reserve-detail-*.html /reserve.html 301
+
+# Add security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer
+  
 # SPA routing fallback (for single page application routing)
 /*    /index.html   200
