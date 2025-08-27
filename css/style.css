@@ -2562,3 +2562,263 @@ button, a {
     font-size: 1rem;
   }
 }
+
+/* ----------------------------------------------------------------
+   [프라이빗 보호 기능 스타일]
+---------------------------------------------------------------- */
+
+/* 프라이빗 섹션 - 블러 처리 */
+.private-section {
+  position: relative;
+}
+
+.private-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Fallback for browsers that don't support backdrop-filter */
+  background: rgba(255, 255, 255, 0.3);
+  /* Modern browsers with backdrop-filter support */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.private-section.unlocked::before {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background: transparent;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(8px)) {
+  .private-section::before {
+    background: rgba(240, 240, 240, 0.8);
+    filter: blur(2px);
+  }
+  
+  .private-section.unlocked::before {
+    filter: blur(0px);
+  }
+}
+
+/* 잠금 아이콘 오버레이 - 블러 처리 제외 */
+.lock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(0px) !important;
+  filter: none !important;
+}
+
+.lock-overlay:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.lock-overlay:active {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.lock-overlay.hidden {
+  display: none;
+}
+
+.lock-icon {
+  width: 28px;
+  height: 28px;
+  color: #555;
+  filter: none !important;
+}
+
+/* 프라이빗 팝업 모달 */
+.private-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.private-popup.show {
+  display: flex;
+}
+
+.private-popup-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.private-popup h3 {
+  color: #333;
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.private-popup p {
+  color: #666;
+  margin: 0 0 25px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.popup-btn.primary {
+  background: #007AFF;
+  color: white;
+}
+
+.popup-btn.primary:hover {
+  background: #0056CC;
+}
+
+.popup-btn.secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.popup-btn.secondary:hover {
+  background: #e0e0e0;
+}
+
+/* 비밀번호 입력 섹션 */
+.password-section {
+  display: none;
+  margin-top: 20px;
+}
+
+.password-section.show {
+  display: block;
+}
+
+.password-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #007AFF;
+}
+
+.password-input.error {
+  border-color: #FF3B30;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.error-message {
+  color: #FF3B30;
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+/* 팝업 닫기 버튼 */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.popup-close:hover {
+  color: #666;
+}
+
+/* 프라이빗 보호 기능 모바일 반응형 */
+@media (max-width: 480px) {
+  .private-popup {
+    padding: 15px;
+  }
+  
+  .private-popup-content {
+    padding: 25px 20px;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .private-popup h3 {
+    font-size: 1.2rem;
+  }
+  
+  .lock-overlay {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .lock-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
