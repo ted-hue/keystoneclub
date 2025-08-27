@@ -1,8 +1,18 @@
 class PrivateProtection {
   constructor() {
-    this.correctPassword = '1234*';
+    // Base64 encoded password for basic obfuscation
+    this.encodedPassword = 'MTIzNCo='; // '1234*' encoded
     this.isUnlocked = false;
     this.init();
+  }
+  
+  // Simple decode function
+  decodePassword(encoded) {
+    try {
+      return atob(encoded);
+    } catch (e) {
+      return '';
+    }
   }
 
   init() {
@@ -168,8 +178,9 @@ class PrivateProtection {
     const input = this.popup.querySelector('#passwordInput');
     const errorMessage = this.popup.querySelector('#errorMessage');
     const enteredPassword = input.value;
+    const correctPassword = this.decodePassword(this.encodedPassword);
 
-    if (enteredPassword === this.correctPassword) {
+    if (enteredPassword === correctPassword) {
       this.unlockContent();
       this.hidePopup();
     } else {
