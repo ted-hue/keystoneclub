@@ -2615,6 +2615,32 @@ button, a {
   transform: translate(-50%, -50%);
   z-index: 100;
   cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(0px) !important;
+  filter: none !important;
+}
+
+.lock-overlay:hover .lock-content {
+  transform: scale(1.1);
+}
+
+.lock-overlay:active .lock-content {
+  transform: scale(0.95);
+}
+
+.lock-overlay.hidden {
+  display: none;
+}
+
+.lock-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.lock-icon-container {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   width: 70px;
@@ -2623,29 +2649,34 @@ button, a {
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(0px) !important;
-  filter: none !important;
 }
 
-.lock-overlay:hover {
+.lock-overlay:hover .lock-icon-container {
   background: rgba(255, 255, 255, 1);
-  transform: translate(-50%, -50%) scale(1.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.lock-overlay:active {
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-.lock-overlay.hidden {
-  display: none;
 }
 
 .lock-icon {
   width: 28px;
   height: 28px;
   color: #555;
+  filter: none !important;
+}
+
+.lock-guide-text {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  font-family: 'Pretendard', sans-serif;
+  backdrop-filter: blur(0px) !important;
   filter: none !important;
 }
 
@@ -2812,13 +2843,19 @@ button, a {
     font-size: 1.2rem;
   }
   
-  .lock-overlay {
+  .lock-icon-container {
     width: 60px;
     height: 60px;
+    margin-bottom: 6px;
   }
   
   .lock-icon {
     width: 24px;
     height: 24px;
+  }
+  
+  .lock-guide-text {
+    font-size: 11px;
+    padding: 3px 6px;
   }
 }
